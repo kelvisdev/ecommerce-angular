@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
+const mockTitle = 'Mock title';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -12,6 +13,7 @@ describe('HeaderComponent', () => {
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+    component.title = mockTitle;
     fixture.detectChanges();
   });
 
@@ -22,6 +24,9 @@ describe('HeaderComponent', () => {
   it('should contain title', () => {
     const header: HTMLHeadElement =
       fixture.nativeElement.querySelector('header');
-    expect(header.textContent).toBe('Ecommerce');
+    expect(header.textContent).toBe(mockTitle);
+    component.title = 'Another title';
+    fixture.detectChanges();
+    expect(header.textContent).toBe(component.title);
   });
 });
