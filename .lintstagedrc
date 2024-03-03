@@ -1,7 +1,7 @@
 {
   "{src,modules}/**/*.{js,ts,jsx,tsx,json,html,css,scss}": [
     "nx affected:lint --fix --uncommitted",
-    "nx affected:test --base=main --head=HEAD",
+    "nx affected:test --base=main --head=HEAD --passWithNoTests",
     "nx format:write --uncommited"
   ]
 }
