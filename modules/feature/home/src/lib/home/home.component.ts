@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { mockProducts } from '@ecommerce-angular/product-data-access';
+import { RecommendedProductsService } from '@ecommerce-angular/product-data-access';
 
 @Component({
   selector: 'ecommerce-angular-home',
@@ -11,5 +11,7 @@ import { mockProducts } from '@ecommerce-angular/product-data-access';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  products = mockProducts;
+  products$ = this.recommendedProductsService.getProducts();
+
+  constructor(private recommendedProductsService: RecommendedProductsService) {}
 }
