@@ -11,4 +11,11 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('@ecommerce-angular/home').then((m) => m.homeRoutes),
   },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('@ecommerce-angular/product-detail').then(
+        (m) => m.productDetailRoutes
+      ),
+  },
 ];

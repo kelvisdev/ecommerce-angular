@@ -5,6 +5,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { RouterModule } from '@angular/router';
 import { ProductSearchService } from '@ecommerce-angular/product-data-access';
 import { Product } from 'modules/data-access/product/src/lib/models/product.model';
 import {
@@ -24,6 +25,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatAutocompleteModule,
+    RouterModule,
   ],
   templateUrl: './product-search.component.html',
   styleUrl: './product-search.component.scss',
