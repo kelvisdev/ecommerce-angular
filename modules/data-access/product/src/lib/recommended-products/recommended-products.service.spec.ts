@@ -26,7 +26,6 @@ describe('RecommendedProductsService', () => {
 
   it('should return recommended products correctly', () => {
     // Arrange
-    const mockName = 'notebook';
     const url = `${service.apiUrl}/products?page=1&limit=6`;
     let result: Product[] = [];
 
