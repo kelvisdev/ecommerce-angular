@@ -18,4 +18,9 @@ export const appRoutes: Route[] = [
         (m) => m.productDetailRoutes
       ),
   },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('@ecommerce-angular/auth-form').then((m) => m.authFormRoutes),
+  },
 ];
